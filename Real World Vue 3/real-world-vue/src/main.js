@@ -1,4 +1,3 @@
-import './plugins/axios'
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 
