@@ -25,7 +25,6 @@
 
 <script>
 import EventCard from "@/components/EventCard.vue"
-import EventService from "@/services/EventServices"
 
 export default {
   name: "EventList",
@@ -33,39 +32,17 @@ export default {
   components: {
     EventCard,
   },
-  data() {
-    return {
-      events: null,
-      totalEvents: 0,
-    }
-  },
-  beforeRouteEnter(routeTo, routeFrom, next) {
-    EventService.getEventsSem()
-      .then((response) => {
-        next((comp) => {
-          comp.events = response.data
-          comp.totalEvents = response.headers["x-total-count"]
-        })
-      })
-      .catch(() => {
-        next({ name: "NetworkError" })
-      })
-  },
-  beforeRouteUpdate() {
-    return EventService.getEventsSem()
-      .then((response) => {
-        this.events = response.data
-        this.totalEvents = response.headers["x-total-count"]
-      })
-      .catch(() => {
-        return { name: "NetworkError" }
-      })
+  created() {
+    this.$store.dispatch("fetchEvents")
   },
   computed: {
     hasNextPages() {
       const totalPages = Math.ceil(this.totalEvents / 2)
 
       return this.page < totalPages
+    },
+    events() {
+      return this.$store.state.events
     },
   },
 }

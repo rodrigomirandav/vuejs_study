@@ -72,6 +72,16 @@
       "date": "",
       "time": "",
       "organizer": "Adam Jahr"
+    },
+    {
+      "id": "e4273eed-bba3-4770-9324-f101ed7e58cb",
+      "category": "education",
+      "title": "Teste",
+      "description": "Teste",
+      "location": "Teste",
+      "date": "Teste",
+      "time": "Teste",
+      "organizer": "Adam Jahr"
     }
   ]
 }
