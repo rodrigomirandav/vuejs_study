@@ -1,1 +1,77 @@
-[{"id":5928101,"category":"animal welfare","title":"Cat Adoption Day","description":"Find your new feline friend at this event.","location":"Meow Town","date":"January 28, 2022","time":"12:00","petsAllowed":true,"organizer":"Kat Laydee"},{"id":444212510,"category":"animal welfare","title":"Cat Adoption Day","description":"Find your new feline friend at this event.","location":"Meow Town","date":"January 28, 2022","time":"12:00","petsAllowed":true,"organizer":"Kat Laydee"},{"id":24542103265,"category":"animal welfare","title":"Cat Adoption Day","description":"Find your new feline friend at this event.","location":"Meow Town","date":"January 28, 2022","time":"12:00","petsAllowed":true,"organizer":"Kat Laydee"}]
+{
+  "events": [
+    {
+      "id": 5928101,
+      "category": "animal welfare",
+      "title": "Cat Adoption Day",
+      "description": "Find your new feline friend at this event.",
+      "location": "Meow Town",
+      "date": "January 28, 2022",
+      "time": "12:00",
+      "petsAllowed": true,
+      "organizer": "Kat Laydee"
+    },
+    {
+      "id": 444212510,
+      "category": "animal welfare",
+      "title": "Cat Adoption Day",
+      "description": "Find your new feline friend at this event.",
+      "location": "Meow Town",
+      "date": "January 28, 2022",
+      "time": "12:00",
+      "petsAllowed": true,
+      "organizer": "Kat Laydee"
+    },
+    {
+      "id": 24542103265,
+      "category": "animal welfare",
+      "title": "Cat Adoption Day",
+      "description": "Find your new feline friend at this event.",
+      "location": "Meow Town",
+      "date": "January 28, 2022",
+      "time": "12:00",
+      "petsAllowed": true,
+      "organizer": "Kat Laydee"
+    },
+    {
+      "id": "5ccd3a75-0301-4bfc-bd1f-f230f3d6c942",
+      "category": "food",
+      "title": "Comida de Boteco",
+      "description": "Evento para gastronomia brasileira de boteco",
+      "location": "São Paulo",
+      "date": "25/01/2022",
+      "time": "15:00",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "c3ca9e18-e6f6-4d82-b721-aa9d2a792522",
+      "category": "community",
+      "title": "Testes",
+      "description": "Testes",
+      "location": "Testes",
+      "date": "Testes",
+      "time": "Testes",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "dd269f79-5015-4093-bd7b-a92ecf537bc2",
+      "category": "animal welfare",
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "d0a25fb6-aa3e-40c6-b3ed-175ea37aa53b",
+      "category": "education",
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "organizer": "Adam Jahr"
+    }
+  ]
+}

@@ -40,7 +40,7 @@ export default {
     }
   },
   beforeRouteEnter(routeTo, routeFrom, next) {
-    EventService.getEvents(2, parseInt(routeTo.query.page || 1))
+    EventService.getEventsSem()
       .then((response) => {
         next((comp) => {
           comp.events = response.data
@@ -51,8 +51,8 @@ export default {
         next({ name: "NetworkError" })
       })
   },
-  beforeRouteUpdate(routeTo) {
-    return EventService.getEvents(2, parseInt(routeTo.query.page || 1))
+  beforeRouteUpdate() {
+    return EventService.getEventsSem()
       .then((response) => {
         this.events = response.data
         this.totalEvents = response.headers["x-total-count"]
