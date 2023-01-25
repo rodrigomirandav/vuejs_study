@@ -9,6 +9,7 @@ import NotFound from "../views/NotFound.vue"
 import NProgress from "nprogress"
 import GStore from "@/store"
 import EventServices from "@/services/EventServices"
+import EventCreate from "@/views/EventCreate.vue"
 
 const routes = [
   {
@@ -16,6 +17,11 @@ const routes = [
     name: "EventList",
     component: EventList,
     props: (route) => ({ page: parseInt(route.query.page) || 1 }),
+  },
+  {
+    path: "/event/create",
+    name: "EventCreate",
+    component: EventCreate,
   },
   {
     path: "/events/:id",
