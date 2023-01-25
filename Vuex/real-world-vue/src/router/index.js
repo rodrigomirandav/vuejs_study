@@ -10,6 +10,7 @@ import NProgress from "nprogress"
 import GStore from "@/store"
 import EventServices from "@/services/EventServices"
 import EventCreate from "@/views/EventCreate.vue"
+import ErrorDiplay from "@/views/ErrosDisplay.vue"
 
 const routes = [
   {
@@ -76,6 +77,12 @@ const routes = [
     path: "/404/:resource",
     name: "404Resource",
     component: NotFound,
+    props: true,
+  },
+  {
+    path: "/error/:error",
+    name: "ErrorDiplay",
+    component: ErrorDiplay,
     props: true,
   },
 ]

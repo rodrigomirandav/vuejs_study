@@ -21,16 +21,16 @@ export default createStore({
           commit("ADD_EVENT", event)
         })
         .catch((error) => {
-          console.log(error)
+          throw error
         })
     },
     fetchEvents({ commit }) {
-      EventServices.getEventsSem()
+      return EventServices.getEventsSem()
         .then((response) => {
           commit("SET_EVENTS", response.data)
         })
         .catch((error) => {
-          console.log(error)
+          throw error
         })
     },
   },

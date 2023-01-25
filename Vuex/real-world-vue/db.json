@@ -82,6 +82,16 @@
       "date": "Teste",
       "time": "Teste",
       "organizer": "Adam Jahr"
+    },
+    {
+      "id": "24548919-df42-45a5-9db3-a04ba88b44ed",
+      "category": "food",
+      "title": "FOOD",
+      "description": "FOOD",
+      "location": "FOOD",
+      "date": "FOOD",
+      "time": "FOOD",
+      "organizer": "Adam Jahr"
     }
   ]
 }
