@@ -46,6 +46,7 @@ const routes = [
         path: "edit",
         name: "EventEdit",
         component: EventEdit,
+        meta: { requireAuth: true },
       },
     ],
   },
@@ -76,10 +77,32 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior(savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
 })
 
-router.beforeEach(() => {
+router.beforeEach((to, from) => {
   NProgress.start()
+
+  const notAuthorized = true
+  if (to.meta.requireAuth && notAuthorized) {
+    GStore.flashMessage = "Sorry, you are not authorizes to view this page"
+
+    setTimeout(() => {
+      GStore.flashMessage = ""
+    }, 3000)
+
+    if (from.href) {
+      return false
+    } else {
+      return { path: "/" }
+    }
+  }
 })
 
 router.afterEach(() => {
