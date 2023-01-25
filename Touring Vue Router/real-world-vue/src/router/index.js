@@ -6,6 +6,9 @@ import EventDetails from "../views/event/Details.vue"
 import EventRegister from "../views/event/Register.vue"
 import EventEdit from "../views/event/Edit.vue"
 import NotFound from "../views/NotFound.vue"
+import NProgress from "nprogress"
+import GStore from "@/store"
+import EventServices from "@/services/EventServices"
 
 const routes = [
   {
@@ -19,6 +22,15 @@ const routes = [
     name: "EventLayout",
     props: true,
     component: EventLayout,
+    beforeEnter: (to) => {
+      return EventServices.getEvent(to.params.id)
+        .then((response) => {
+          GStore.event = response.data
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    },
     children: [
       {
         path: "",
@@ -64,6 +76,14 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+})
+
+router.beforeEach(() => {
+  NProgress.start()
+})
+
+router.afterEach(() => {
+  NProgress.done()
 })
 
 export default router
